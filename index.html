@@ -3,106 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Geetha E - Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f8f9fa;
             color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
             padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
         }
-        h1, h2, h3 {
-            color: #444;
+        .skills li, .hobbies li {
+    margin-left: 20px; /* Move list items to the right */
+}
+
+
+        .resume {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .header {
-            text-align: center;
+        .section-title {
+            color: #007bff;
+            margin-bottom: 15px;
         }
-        .header h1 {
-            margin: 0;
+        .table th, .table td {
+            vertical-align: middle;
         }
-        .contact-info {
-            text-align: center;
-            margin: 10px 0;
+        .skills, .hobbies {
+            list-style-type: none;
+            padding-left: 0;
         }
-        .contact-info a {
-            color: #007BFF;
-            text-decoration: none;
+        .skills li::before, .hobbies li::before {
+            content: "\2022"; /* Bullet point */
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 5px;
-        }
-        .list-item {
-            margin-bottom: 5px;
-        }
-        ul {
-            padding-left: 20px;
+        .download-btn {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>John Doe</h1>
-            <p class="contact-info">
-                <a href="mailto:johndoe@example.com">johndoe@example.com</a> | (123) 456-7890 | Hyderabad, India
+        <div class="resume" id="resume-content">
+          <h1 class="text-center">Geetha E</h1>
+          <p class="text-center"><i class="bi bi-geo-alt-fill"></i> Ferozguda, Hyderabad, Telangana, 500042</p>
+          <p class="text-center"><i class="bi bi-telephone-fill"></i> 9980708343 | <i class="bi bi-envelope-fill"></i> <a href="mailto:gitaediga0597@gmail.com" style="text-decoration: none; color: inherit;">gitaediga0597@gmail.com</a></p>
+
+            <hr>
+
+            <h2 class="section-title">Professional Summary</h2>
+            <p>
+                Passionate high school mathematics teacher with 3 years of experience, specializing in arithmetic and foundational number theory. Recognized for excellent communication skills, patience, and adaptability, fostering an inclusive and supportive classroom environment. Proficient in creating engaging lesson plans using PowerPoint presentations. Committed to inspiring students and encouraging a love for mathematics, while incorporating creative approaches through practical applications.
             </p>
-        </div>
-        <div class="section">
-            <h2>Summary</h2>
-            <p>A motivated software developer with expertise in full-stack development, API integration, and UI/UX design. Passionate about creating impactful digital solutions.</p>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
+
+            <h2 class="section-title">Professional Experience</h2>
+            <h5>High School Mathematics Teacher</h5>
+            <p><strong>Swami Vivekananda High School, Sri Ram Nagar, Gangawathi</strong> (2021 – 2022)</p>
             <ul>
-                <li>Programming Languages: Python, JavaScript, PHP</li>
-                <li>Frameworks: React, Laravel, Django</li>
-                <li>Tools: Postman, Swagger, Selenium</li>
-                <li>Databases: MySQL, Firebase</li>
-                <li>Version Control: Git, GitHub</li>
+                <li>Taught high school mathematics for 1 year for 8th, 9th, and 10th Mathematics NCERT syllabus.</li>
+                <li>Developed and delivered engaging lesson plans using PowerPoint presentations.</li>
+                <li>Provided individualized attention to students to enhance their understanding of mathematical concepts.</li>
             </ul>
-        </div>
-        <div class="section">
-            <h2>Experience</h2>
-            <h3>Software Developer, iiiQBets</h3>
-            <p><em>June 2021 - Present</em></p>
+
+            <h5>High School Mathematics Teacher</h5>
+            <p><strong>Sadashiva High School, Ferozguda, Hyderabad</strong> (October 2022 – Present)</p>
             <ul>
-                <li>Developed CRM and ERP solutions for various industries.</li>
-                <li>Integrated payment gateways and APIs for seamless user experiences.</li>
+                <li>Taught high school mathematics for 2 years, for 5th to 8th Mathematics CBSE syllabus.</li>
+                <li>Conducted specialized classes for 5th and 6th grades, focusing on Maths Olympiad preparation.</li>
+                <li>Fostered a positive and inclusive classroom environment to promote learning and student growth.</li>
+                <li>Collaborated with colleagues to design curricula and implement innovative teaching strategies.</li>
+                <li>Developed and delivered interactive lesson plans using PowerPoint presentations to enhance student understanding.</li>
+                <li>Provided individualized support to students, ensuring their academic growth and confidence in mathematics.</li>
             </ul>
-            <h3>Software Developer, Verizon</h3>
-            <p><em>January 2019 - May 2021</em></p>
-            <ul>
-                <li>Automated processes using Python and shell scripting.</li>
-                <li>Monitored application issues with an issue tracker system.</li>
+
+            <h2 class="section-title">Education</h2>
+            <table class="table table-bordered">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Qualification</th>
+                        <th>Institution</th>
+                        <th>Year of Passing</th>
+                        <th>Marks %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10th</td>
+                        <td>Lions High School, Gangawathi</td>
+                        <td>2013</td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>Pragathi PU College, Bangalore</td>
+                        <td>2015</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td>Degree</td>
+                        <td>JSS College, Dharwad</td>
+                        <td>2018</td>
+                        <td>81</td>
+                    </tr>
+                    <tr>
+                        <td>MSC in Mathematics</td>
+                        <td>KCD College, Karnataka University</td>
+                        <td>2020</td>
+                        <td>75</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills">
+                <li>Expertise in Arithmetic and Number Theory</li>
+                <li>Excellent Communication and Teamwork Skills</li>
+                <li>Adaptability and Patience in Teaching</li>
+                <li>Technology Integration: PowerPoint Proficiency</li>
+                <li>Creative Teaching Approaches: Incorporating Daily Life Practical Examples into Lessons</li>
             </ul>
+
+            <h2 class="section-title">Hobbies and Interests</h2>
+            <ul class="hobbies">
+                <li>Painting and Drawing</li>
+                <li>Exploring Creative Methods to Enhance Teaching</li>
+                <li>Encouraging Student Engagement Through Practical Examples</li>
+            </ul>
+
+            <h2 class="section-title">References</h2>
+            <p>Available upon request.</p>
         </div>
-        <div class="section">
-            <h2>Education</h2>
-            <h3>Bachelor of Technology (B.Tech) in Computer Science</h3>
-            <p>Kakatiya Institute of Technology & Science, Warangal | 2010 | 78%</p>
-        </div>
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li>Co-operative Society Management System: Developed APIs and integrated Bluetooth printers.</li>
-                <li>Rand Water Mobile App: Implemented push notifications and image uploads.</li>
-                <li>Jewellery CRM: Designed for managing customer orders and quotations.</li>
-            </ul>
+
+        <!-- Download Resume Button -->
+        <div class="text-center download-btn">
+            <button class="btn btn-primary" id="download-btn">
+                <i class="bi bi-download"></i> Download as PDF
+            </button>
         </div>
     </div>
+
+    <script>
+        document.getElementById("download-btn").addEventListener("click", function () {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+
+            html2canvas(document.querySelector("#resume-content")).then(canvas => {
+                const imgData = canvas.toDataURL("image/png");
+                const imgWidth = 210; // A4 width in mm
+                const pageHeight = 297; // A4 height in mm
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                let heightLeft = imgHeight;
+                let position = 0;
+
+                pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+
+                while (heightLeft >= 0) {
+                    position = heightLeft - imgHeight;
+                    pdf.addPage();
+                    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+                }
+
+                pdf.save("Geetha_E_Resume.pdf");
+            });
+        });
+    </script>
 </body>
 </html>
