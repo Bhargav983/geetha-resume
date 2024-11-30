@@ -12,28 +12,24 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             background-color: #f8f9fa;
-            color: #333;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
         }
-        .skills li, .hobbies li {
-    margin-left: 20px; /* Move list items to the right */
-}
-
-
         .resume {
             background: #fff;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 900px;
         }
         .section-title {
             color: #007bff;
             margin-bottom: 15px;
         }
-        .table th, .table td {
-            vertical-align: middle;
+        .table-responsive {
+            margin-bottom: 20px;
         }
         .skills, .hobbies {
             list-style-type: none;
@@ -47,17 +43,46 @@
             width: 1em;
             margin-left: -1em;
         }
-        .download-btn {
-            margin-top: 20px;
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .resume {
+                padding: 15px;
+                margin: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            p, li {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            p, li {
+                font-size: 12px;
+            }
+            .resume {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="resume" id="resume-content">
-          <h1 class="text-center">Geetha E</h1>
-          <p class="text-center"><i class="bi bi-geo-alt-fill"></i> Ferozguda, Hyderabad, Telangana, 500042</p>
-          <p class="text-center"><i class="bi bi-telephone-fill"></i> 9980708343 | <i class="bi bi-envelope-fill"></i> <a href="mailto:gitaediga0597@gmail.com" style="text-decoration: none; color: inherit;">gitaediga0597@gmail.com</a></p>
+            <h1 class="text-center">Geetha E</h1>
+            <p class="text-center"><i class="bi bi-geo-alt-fill"></i> Ferozguda, Hyderabad, Telangana, 500042</p>
+            <p class="text-center"><i class="bi bi-telephone-fill"></i> 9980708343 | <i class="bi bi-envelope-fill"></i> <a href="mailto:gitaediga0597@gmail.com" style="text-decoration: none; color: inherit;">gitaediga0597@gmail.com</a></p>
 
             <hr>
 
@@ -68,9 +93,9 @@
 
             <h2 class="section-title">Professional Experience</h2>
             <h5><strong>High School Mathematics Teacher</strong></h5>
-            <p>Swami Vivekananda High School, Sri Ram Nagar, Gangawathi(2021 – 2022)</p>
+            <p>Swami Vivekananda High School, Sri Ram Nagar, Gangawathi (2021 – 2022)</p>
             <ul>
-                <li>Taught high school mathematics for 1 year for 8th, 9th, and 10th Mathematics NCERT syllabus.</li>
+                <li>Taught high school mathematics for <strong>1 year for 8th, 9th, and 10th Mathematics NCERT syllabus.</strong></li>
                 <li>Developed and delivered engaging lesson plans using PowerPoint presentations.</li>
                 <li>Provided individualized attention to students to enhance their understanding of mathematical concepts.</li>
             </ul>
@@ -78,8 +103,8 @@
             <h5><strong>High School Mathematics Teacher</strong></h5>
             <p>Sadashiva High School, Ferozguda, Hyderabad (October 2022 – Present)</p>
             <ul>
-                <li>Taught high school mathematics for 2 years, for 5th to 8th Mathematics CBSE syllabus.</li>
-                <li>Conducted specialized classes for 5th and 6th grades, focusing on Maths Olympiad preparation.</li>
+                <li>Taught high school mathematics for <strong>2 years, for 5th to 8th Mathematics CBSE syllabus.</strong></li>
+                <li>Conducted specialized classes for 5th and 6th grades, focusing on <strong> Maths Olympiad </strong> preparation.</li>
                 <li>Fostered a positive and inclusive classroom environment to promote learning and student growth.</li>
                 <li>Collaborated with colleagues to design curricula and implement innovative teaching strategies.</li>
                 <li>Developed and delivered interactive lesson plans using PowerPoint presentations to enhance student understanding.</li>
@@ -87,42 +112,44 @@
             </ul>
 
             <h2 class="section-title">Education</h2>
-            <table class="table table-bordered">
-                <thead class="table-primary">
-                    <tr>
-                        <th>Qualification</th>
-                        <th>Institution</th>
-                        <th>Year of Passing</th>
-                        <th>Marks %</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>10th</td>
-                        <td>Lions High School, Gangawathi</td>
-                        <td>2013</td>
-                        <td>85</td>
-                    </tr>
-                    <tr>
-                        <td>Intermediate</td>
-                        <td>Pragathi PU College, Bangalore</td>
-                        <td>2015</td>
-                        <td>72</td>
-                    </tr>
-                    <tr>
-                        <td>Degree</td>
-                        <td>JSS College, Dharwad</td>
-                        <td>2018</td>
-                        <td>81</td>
-                    </tr>
-                    <tr>
-                        <td>MSC in Mathematics</td>
-                        <td>KCD College, Karnataka University</td>
-                        <td>2020</td>
-                        <td>75</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Qualification</th>
+                            <th>Institution</th>
+                            <th>Year of Passing</th>
+                            <th>Marks %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10th</td>
+                            <td>Lions High School, Gangawathi</td>
+                            <td>2013</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td>Pragathi PU College, Bangalore</td>
+                            <td>2015</td>
+                            <td>72</td>
+                        </tr>
+                        <tr>
+                            <td>Degree</td>
+                            <td>JSS College, Dharwad</td>
+                            <td>2018</td>
+                            <td>81</td>
+                        </tr>
+                        <tr>
+                            <td>MSC in Mathematics</td>
+                            <td>KCD College, Karnataka University</td>
+                            <td>2020</td>
+                            <td>75</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h2 class="section-title">Skills</h2>
             <ul class="skills">
